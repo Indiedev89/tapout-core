@@ -6737,9 +6737,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tapout-contracts@workspace:.":
+"tapout-core@workspace:.":
   version: 0.0.0-use.local
-  resolution: "tapout-contracts@workspace:."
+  resolution: "tapout-core@workspace:."
   dependencies:
     "@ethersproject/abi": "npm:^5.8.0"
     "@ethersproject/providers": "npm:^5.8.0"

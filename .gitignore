@@ -16,3 +16,4 @@ yarn-error.log*
 addresses*
 .yarn
 .DS_Store
+.vscode

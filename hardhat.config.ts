@@ -10,7 +10,10 @@ const {
   BASESCAN_API_KEY,
   ARBITRUM_API_KEY,
   OPTIMISM_API_KEY,
-  MEGAETH_API_KEY
+  MEGAETH_API_KEY,
+  SEPOLIA_INFURA,
+  BASE_MAINNET_ALCHEMY,
+  ARB_SEPOLIA
 } = process.env;
 
 const ChainId = {
@@ -141,12 +144,12 @@ const config: HardhatUserConfig = {
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
     sepolia: {
-      url: "https://sepolia.infura.io/v3/043fe2a7eee34f3d8737e3272161788c",
+      url: `https://sepolia.infura.io/v3/${SEPOLIA_INFURA}`,
       chainId: ChainId.sepolia,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
     baseMainnet: {
-      url: "https://base-mainnet.g.alchemy.com/v2/ZueyMcFvyu7LewpHDGMIHDVJ7bLBOO-A",
+      url: `https://base-mainnet.g.alchemy.com/v2/${BASE_MAINNET_ALCHEMY}`,
       chainId: ChainId.baseMainnet,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
@@ -156,7 +159,7 @@ const config: HardhatUserConfig = {
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
     arbitrumSepolia: {
-      url: "https://arb-sepolia.g.alchemy.com/v2/o-YLW7PyC11n_ccjJLI6ScXRizNJt7Ka",
+      url: `https://arb-sepolia.g.alchemy.com/v2/${ARB_SEPOLIA}`,
       chainId: ChainId.arbitrumSepolia,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
     },
